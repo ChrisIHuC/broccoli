@@ -5,7 +5,7 @@ COPY ./src /build/src
 COPY ./pom.xml /build/
 RUN mvn --no-transfer-progress --batch-mode --update-snapshots --also-make package
 
-FROM openjdk:18.0.1.1-slim-buster
+FROM openjdk:21-ea-13-slim-bullseye
 
 WORKDIR /apps/broccoli
 COPY --from=builder /build/target/broccoli-*.jar /apps/broccoli/broccoli.jar
