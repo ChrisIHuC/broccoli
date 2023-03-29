@@ -1,9 +1,9 @@
 name: Example workflow for Maven using Snyk
-on:
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
+on: push
+ # pull_request:
+ #   branches:
+ #     - main
+ # workflow_dispatch:
 jobs:
   security:
     runs-on: ubuntu-latest
